@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace TokenValidator
+namespace Backend
 {
     public class Startup
     {
@@ -40,12 +40,21 @@ namespace TokenValidator
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            var logger = loggerFactory.CreateLogger("default");
+
             app.UseCors(builder =>
                 builder.AllowAnyOrigin()
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials()
             );
+
+
+            string audience = Configuration["MicrosoftIdentity:ClientId"];
+            if(audience == "YOUR CLIENT ID"){
+                logger.LogError("Your appsettings.json has not been updated with the client id (app id) of your application");
+                Environment.Exit(1);
+            }
 
             var options = new JwtBearerOptions
             {

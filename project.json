@@ -58,6 +58,6 @@
   },
 
   "tooling": {
-    "defaultNamespace": "TokenValidator"
+    "defaultNamespace": "Backend"
   }
 }
