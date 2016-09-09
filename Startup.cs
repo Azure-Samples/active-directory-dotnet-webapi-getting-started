@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Backend
 {
@@ -56,10 +57,14 @@ namespace Backend
                 Environment.Exit(1);
             }
 
+            var tokenValidationParameters = new TokenValidationParameters();
+            tokenValidationParameters.ValidateIssuer = false;
+
             var options = new JwtBearerOptions
             {
                 Audience = Configuration["MicrosoftIdentity:ClientId"],
-                Authority = Configuration["MicrosoftIdentity:Authority"]
+                Authority = Configuration["MicrosoftIdentity:Authority"],
+                TokenValidationParameters = tokenValidationParameters
             };
 
             app.UseJwtBearerAuthentication(options);
