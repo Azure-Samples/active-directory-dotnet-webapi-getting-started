@@ -7,7 +7,7 @@ To get step by step instructions on how to integrate this sample backend service
 This sample backend service is written as an ASP.NET Core web API. .NET Core ships with a library for performing JSON Web Token (JWT) Bearer Authentication. Listed below are key highlights for you to review:
 
 1.  Configure JWT Bearer Authentication. In startup.cs:
-```
+   ```
 var tokenValidationParameters = new TokenValidationParameters();
 
 // If you wish to restrict access to specific organizations, you must configure a list of valid issuers
@@ -21,12 +21,12 @@ var options = new JwtBearerOptions
 }; 
 
 app.UseJwtBearerAuthentication(options); 
-```
+   ```
 
    This code in startup.cs configures JWT Bearer Authentication for all routes  
 
 2.  In ClaimsController.cs:
-```
+   ```
 //We have one action method for returning the claims from the current token. 
 public class ClaimsController : Controller 
 { 
@@ -43,7 +43,7 @@ public class ClaimsController : Controller
         ); 
     } 
 } 
-```
+   ```
 You can read more about validating tokens [here](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-tokens/#validating-tokens).
 
 ## Community Help and Support
