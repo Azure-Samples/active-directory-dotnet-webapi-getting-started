@@ -23,9 +23,9 @@ var options = new JwtBearerOptions
 app.UseJwtBearerAuthentication(options); 
 ```
 
-2. This code in startup.cs configures JWT Bearer Authentication for all routes
+This code in startup.cs configures JWT Bearer Authentication for all routes
 
-3. In ClaimsController.cs:
+2. In ClaimsController.cs:
 ```
 //We have one action method for returning the claims from the current token. 
 public class ClaimsController : Controller 
