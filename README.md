@@ -4,7 +4,7 @@ This sample illustrates how to authorize access to your backend services or API 
 To get step by step instructions on how to integrate this sample backend service, you can go to the [Microsoft Identity Portal](https://identity.microsoft.com/Docs/BackendService).
 
 ## About the Basic Backend Service 
-This sample backend service is written as an ASP.Net Core web API. .Net Core ships with a library for performing JSON Web Token (JWT) Bearer Authentication. Listed below are key highlights for you to review:
+This sample backend service is written as an ASP.NET Core web API. .NET Core ships with a library for performing JSON Web Token (JWT) Bearer Authentication. Listed below are key highlights for you to review:
 
 1. Configure JWT Bearer Authentication. In startup.cs:
 ```
