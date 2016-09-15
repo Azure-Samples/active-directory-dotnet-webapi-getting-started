@@ -30,7 +30,6 @@ This code in startup.cs configures JWT Bearer Authentication for all routes
 //We have one action method for returning the claims from the current token. 
 public class ClaimsController : Controller 
 { 
-    // GET api/values 
     [Authorize] 
     [HttpGet] 
     public object Get() 
