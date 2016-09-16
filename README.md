@@ -1,12 +1,12 @@
 #Getting Started Backend Sample 
-This sample illustrates how to authorize access to your backend services or API by validating a token provided by one or more client applications.
+This sample shows how to validate tokens in a backend service.
 
-To get step by step instructions on how to integrate this sample backend service, you can go to the [Microsoft Identity Portal](https://identity.microsoft.com/Docs/BackendService).
+For step by step instructions, see the [Microsoft Identity Portal](https://identity.microsoft.com/Docs/BackendService).
 
 ## About the Basic Backend Service 
-This sample backend service is written as an ASP.NET Core web API. .NET Core ships with a library for performing JSON Web Token (JWT) Bearer Authentication. Listed below are key highlights for you to review:
+This sample backend service is an ASP.NET Core web API. .NET Core ships with a library for performing JSON Web Token (JWT) Bearer Authentication. Here are some key highlights from the code:
 
-1.  Configure JWT Bearer Authentication. In startup.cs:
+1.  This code in startup.cs configures JWT Bearer Authentication for all routes:
    ```
 var tokenValidationParameters = new TokenValidationParameters();
 
@@ -23,9 +23,7 @@ var options = new JwtBearerOptions
 app.UseJwtBearerAuthentication(options); 
    ```
 
-   This code in startup.cs configures JWT Bearer Authentication for all routes  
-
-2.  In ClaimsController.cs:
+2.  This code in ClaimsController.cs sends the claims in the token back to the caller:
    ```
 //We have one action method for returning the claims from the current token. 
 public class ClaimsController : Controller 
