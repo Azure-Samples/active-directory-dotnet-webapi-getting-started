@@ -1,3 +1,9 @@
+---
+services: active-directory
+platforms: dotnet
+author: shoatman
+---
+
 #Getting Started Backend Sample 
 This sample shows how to validate tokens in a backend service.
 
