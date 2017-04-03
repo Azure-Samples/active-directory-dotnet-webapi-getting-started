@@ -4,7 +4,7 @@ platforms: dotnet
 author: shoatman
 ---
 
-#Getting Started Backend Sample 
+# Getting Started Backend Sample 
 This sample shows how to validate tokens in a backend service.
 
 For step by step instructions, see the [Microsoft Identity Portal](https://identity.microsoft.com/Docs/BackendService).
