@@ -1,7 +1,7 @@
 ---
 services: active-directory
 platforms: dotnet
-author: shoatman
+author: jmprieur
 ---
 
 # Getting Started Backend Sample 
