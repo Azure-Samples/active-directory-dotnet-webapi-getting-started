@@ -7,6 +7,12 @@ author: jmprieur
 # Getting Started Backend Sample 
 This sample shows how to validate tokens in a backend service.
 
+> There's a newer version of this sample! Check it out: https://github.com/azure-samples/ms-identity-dotnet-desktop-aspnetcore-webapi
+>
+> This newer sample takes advantage of the Microsoft identity platform (formerly Azure AD v2.0).
+>
+> While still in public preview, every component is supported in production environments.
+
 For step by step instructions, see the [Microsoft Identity Portal](https://identity.microsoft.com/Docs/BackendService).
 
 ## About the Basic Backend Service 
